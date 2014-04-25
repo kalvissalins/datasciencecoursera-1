@@ -1,298 +1,154 @@
-<!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="x-ua-compatible" content="IE=9" >
-
-<title>Code Book</title>
-
-<style type="text/css">
-body, td {
-   font-family: sans-serif;
-   background-color: white;
-   font-size: 12px;
-   margin: 8px;
-}
-
-tt, code, pre {
-   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
-}
-
-h1 { 
-   font-size:2.2em; 
-}
-
-h2 { 
-   font-size:1.8em; 
-}
-
-h3 { 
-   font-size:1.4em; 
-}
-
-h4 { 
-   font-size:1.0em; 
-}
-
-h5 { 
-   font-size:0.9em; 
-}
-
-h6 { 
-   font-size:0.8em; 
-}
-
-a:visited {
-   color: rgb(50%, 0%, 50%);
-}
-
-pre {	
-   margin-top: 0;
-   max-width: 95%;
-   border: 1px solid #ccc;
-   white-space: pre-wrap;
-}
-
-pre code {
-   display: block; padding: 0.5em;
-}
-
-code.r, code.cpp {
-   background-color: #F8F8F8;
-}
+Code Book
+========================================================
 
-table, td, th {
-  border: none;
-}
+## Data Origin
+The processed data bases on the Human Activity Recognition Using Smartphones dataset available at [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). For more details, see the information provided there.
 
-blockquote {
-   color:#666666;
-   margin:0;
-   padding-left: 1em;
-   border-left: 0.5em #EEE solid;
-}
+To compute the datasets below, the version provided at [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) was used.
 
-hr {
-   height: 0px;
-   border-bottom: none;
-   border-top-width: thin;
-   border-top-style: dotted;
-   border-top-color: #999999;
-}
+Both datasets include the training and the test data.
 
-@media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
-   }
+## 1. Tidy Dataset
+The first dataset contains different mean and standard deviation measurements.
 
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
-   }
+### Context Columns
+Subject
 
-   hr { 
-      visibility: hidden;
-      page-break-before: always;
-   }
+Activity
 
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
-   }
+### Measure Columns
+tBodyAcc-mean()-X
 
-   tr, img { 
-      page-break-inside: avoid; 
-   }
+tBodyAcc-mean()-Y
 
-   img { 
-      max-width: 100% !important; 
-   }
+tBodyAcc-mean()-Z
 
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
-   }
+tGravityAcc-mean()-X
 
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
-   }
+tGravityAcc-mean()-Y
 
-   h2, h3 { 
-      page-break-after: avoid; 
-   }
-}
+tGravityAcc-mean()-Z
 
-</style>
+tBodyAccJerk-mean()-X
 
+tBodyAccJerk-mean()-Y
 
+tBodyAccJerk-mean()-Z
 
+tBodyGyro-mean()-X
 
+tBodyGyro-mean()-Y
 
-</head>
+tBodyGyro-mean()-Z
 
-<body>
-<h1>Code Book</h1>
+tBodyGyroJerk-mean()-X
 
-<h2>Tidy Dataset</h2>
+tBodyGyroJerk-mean()-Y
 
-<p>The first dataset contains different mean and standard deviation measurements per subject and activity.</p>
+tBodyGyroJerk-mean()-Z
 
-<h3>Context Columns</h3>
+tBodyAccMag-mean()
 
-<p>Subject</p>
+tGravityAccMag-mean()
 
-<p>Activity</p>
+tBodyAccJerkMag-mean()
 
-<h3>Measure Columns</h3>
+tBodyGyroMag-mean()
 
-<p>tBodyAcc-mean()-X</p>
+tBodyGyroJerkMag-mean()
 
-<p>tBodyAcc-mean()-Y</p>
+fBodyAcc-mean()-X
 
-<p>tBodyAcc-mean()-Z</p>
+fBodyAcc-mean()-Y
 
-<p>tGravityAcc-mean()-X</p>
+fBodyAcc-mean()-Z
 
-<p>tGravityAcc-mean()-Y</p>
+fBodyAccJerk-mean()-X
 
-<p>tGravityAcc-mean()-Z</p>
+fBodyAccJerk-mean()-Y
 
-<p>tBodyAccJerk-mean()-X</p>
+fBodyAccJerk-mean()-Z
 
-<p>tBodyAccJerk-mean()-Y</p>
+fBodyGyro-mean()-X
 
-<p>tBodyAccJerk-mean()-Z</p>
+fBodyGyro-mean()-Y
 
-<p>tBodyGyro-mean()-X</p>
+fBodyGyro-mean()-Z
 
-<p>tBodyGyro-mean()-Y</p>
+fBodyAccMag-mean()
 
-<p>tBodyGyro-mean()-Z</p>
+fBodyBodyAccJerkMag-mean()
 
-<p>tBodyGyroJerk-mean()-X</p>
+fBodyBodyGyroMag-mean()
 
-<p>tBodyGyroJerk-mean()-Y</p>
+fBodyBodyGyroJerkMag-mean()
 
-<p>tBodyGyroJerk-mean()-Z</p>
+tBodyAcc-std()-X
 
-<p>tBodyAccMag-mean()</p>
+tBodyAcc-std()-Y
 
-<p>tGravityAccMag-mean()</p>
+tBodyAcc-std()-Z
 
-<p>tBodyAccJerkMag-mean()</p>
+tGravityAcc-std()-X
 
-<p>tBodyGyroMag-mean()</p>
+tGravityAcc-std()-Y
 
-<p>tBodyGyroJerkMag-mean()</p>
+tGravityAcc-std()-Z
 
-<p>fBodyAcc-mean()-X</p>
+tBodyAccJerk-std()-X
 
-<p>fBodyAcc-mean()-Y</p>
+tBodyAccJerk-std()-Y
 
-<p>fBodyAcc-mean()-Z</p>
+tBodyAccJerk-std()-Z
 
-<p>fBodyAccJerk-mean()-X</p>
+tBodyGyro-std()-X
 
-<p>fBodyAccJerk-mean()-Y</p>
+tBodyGyro-std()-Y
 
-<p>fBodyAccJerk-mean()-Z</p>
+tBodyGyro-std()-Z
 
-<p>fBodyGyro-mean()-X</p>
+tBodyGyroJerk-std()-X
 
-<p>fBodyGyro-mean()-Y</p>
+tBodyGyroJerk-std()-Y
 
-<p>fBodyGyro-mean()-Z</p>
+tBodyGyroJerk-std()-Z
 
-<p>fBodyAccMag-mean()</p>
+tBodyAccMag-std()
 
-<p>fBodyBodyAccJerkMag-mean()</p>
+tGravityAccMag-std()
 
-<p>fBodyBodyGyroMag-mean()</p>
+tBodyAccJerkMag-std()
 
-<p>fBodyBodyGyroJerkMag-mean()</p>
+tBodyGyroMag-std()
 
-<p>tBodyAcc-std()-X</p>
+tBodyGyroJerkMag-std()
 
-<p>tBodyAcc-std()-Y</p>
+fBodyAcc-std()-X
 
-<p>tBodyAcc-std()-Z</p>
+fBodyAcc-std()-Y
 
-<p>tGravityAcc-std()-X</p>
+fBodyAcc-std()-Z
 
-<p>tGravityAcc-std()-Y</p>
+fBodyAccJerk-std()-X
 
-<p>tGravityAcc-std()-Z</p>
+fBodyAccJerk-std()-Y
 
-<p>tBodyAccJerk-std()-X</p>
+fBodyAccJerk-std()-Z
 
-<p>tBodyAccJerk-std()-Y</p>
+fBodyGyro-std()-X
 
-<p>tBodyAccJerk-std()-Z</p>
+fBodyGyro-std()-Y
 
-<p>tBodyGyro-std()-X</p>
+fBodyGyro-std()-Z
 
-<p>tBodyGyro-std()-Y</p>
+fBodyAccMag-std()
 
-<p>tBodyGyro-std()-Z</p>
+fBodyBodyAccJerkMag-std()
 
-<p>tBodyGyroJerk-std()-X</p>
+fBodyBodyGyroMag-std()
 
-<p>tBodyGyroJerk-std()-Y</p>
+fBodyBodyGyroJerkMag-std()
 
-<p>tBodyGyroJerk-std()-Z</p>
 
-<p>tBodyAccMag-std()</p>
-
-<p>tGravityAccMag-std()</p>
-
-<p>tBodyAccJerkMag-std()</p>
-
-<p>tBodyGyroMag-std()</p>
-
-<p>tBodyGyroJerkMag-std()</p>
-
-<p>fBodyAcc-std()-X</p>
-
-<p>fBodyAcc-std()-Y</p>
-
-<p>fBodyAcc-std()-Z</p>
-
-<p>fBodyAccJerk-std()-X</p>
-
-<p>fBodyAccJerk-std()-Y</p>
-
-<p>fBodyAccJerk-std()-Z</p>
-
-<p>fBodyGyro-std()-X</p>
-
-<p>fBodyGyro-std()-Y</p>
-
-<p>fBodyGyro-std()-Z</p>
-
-<p>fBodyAccMag-std()</p>
-
-<p>fBodyBodyAccJerkMag-std()</p>
-
-<p>fBodyBodyGyroMag-std()</p>
-
-<p>fBodyBodyGyroJerkMag-std()</p>
-
-<h2>Tidy Dataset 2</h2>
-
-<p>The second dataset is an aggregation of the first dataset. If shows all measurements averaged by subject and activity.</p>
-
-</body>
-
-</html>
-
+## 2. Tidy Dataset 2
+The second dataset is an aggregation of the first dataset. It shows all measurements averaged per subject and activity. The columns equal to the ones provided in the first dataset.
